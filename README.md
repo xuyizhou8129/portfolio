@@ -1,5 +1,5 @@
 # Xuyi Zhou | Electrical & Computer Engineering @ Northwestern
-
+---
 Hi! I’m Xuyi, an ECE undergrad at Northwestern University with a strong interest in electronics, hardware, and anything that runs closer to the metal. I’m currently exploring different areas like **ASIC design**, **Computer Architecture**, **VLSI**, **FPGAs**, and **embedded systems** — trying to figure out where I’d like to specialize long-term. I’ve been diving into relevant classes and hands-on projects: building custom accelerators in Chipyard, optimizing EDA flows, designing smart camera systems, and wiring up sensor boards for the Formula Racing team. I really enjoy solving hardware challenges and am always looking for new ways to learn and push myself. I don’t have everything figured out yet, but I’m excited to keep learning and see where this path takes me.
 ---
 
