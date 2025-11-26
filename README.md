@@ -1,70 +1,86 @@
 # Xuyi Zhou | Electrical & Computer Engineering @ Northwestern University
 
+Hi! I’m Xuyi, an electrical engineering BS/MS student at Northwestern University interested in **ASIC design**, **computer architecture**, **VLSI**, **FPGAs**, and **embedded systems**. I like working close to the hardware stack — from circuit-level design and physical implementation to accelerators and firmware.
 
-Hi! I’m Xuyi, an ECE undergrad at Northwestern University with a strong interest in electronics, hardware, and anything that runs closer to the metal. I’m currently exploring different areas like **ASIC design**, **Computer Architecture**, **VLSI**, **FPGAs**, and **embedded systems** — trying to figure out where I’d like to specialize long-term. I’ve been diving into relevant classes and hands-on projects: building custom accelerators in Chipyard, optimizing EDA flows, designing smart camera systems, and wiring up sensor boards for the Formula Racing team. I really enjoy solving hardware challenges and am always looking for new ways to learn and push myself. I don’t have everything figured out yet, but I’m excited to keep learning and see where this path takes me.
+Recently, I’ve been:
+- Building **Reed–Solomon accelerators** in a RISC-V SoC
+- Exploring **GPU-accelerated EDA** for gate sizing
+- Designing **embedded vision systems** on Raspberry Pi
+- Developing **mixed-signal sensor and telemetry hardware** for Formula Racing
+
+I’m still exploring where to specialize long-term, but I really enjoy tackling hardware problems end-to-end and learning new tools along the way.
+
+---
 
 ## Featured Projects
 
 ### GPU-Accelerated Gate Sizing using the Held Algorithm  
 **[GitHub](https://github.com/danielhufnagle/COMP_ENG-357-Final.git)** • [Paper](https://www.overleaf.com/read/pvsbfdhfkqzf#b064cc)  
-- CUDA implementation of the Held algorithm for gate sizing in VLSI  
-- Integrated with the `rsz` module in **OpenROAD**  
-- Achieved **6.2% area reduction** for tinyRocket and **16.9%** for GCD designs  
-- Benchmarked against default OpenROAD flow and published in a 9-page technical report
+- Implemented a **CUDA** version of the Held gate sizing algorithm for silicon physical design automation  
+- Integrated with the **`rsz`** resizer module in **OpenROAD**  
+- Achieved **~6% area reduction** on tinyRocket and **~17%** on GCD designs compared to default OpenROAD flow  
+- Verified correctness using OpenROAD testbenches and documented in a 9-page technical report  
 
-### Reed–Solomon FEC Hardware Accelerator  
+### Reed–Solomon FEC Hardware Accelerator (RoCC)  
 **[GitHub](https://github.com/xuyizhou8129/RoccAcc.git)**  
-- Designing a full-stack **RoCC accelerator** for Reed–Solomon encoding and decoding  
-- Integrated into the **Rocket Core pipeline** via Chipyard  
-- Includes Verilog generation, simulation, and benchmarking framework
+- Designing a **Reed–Solomon co-processor** as a **RoCC accelerator** in a RISC-V Rocket core  
+- Implemented at RTL using Verilog-based HDL within **Chipyard**, coordinating with caches and I/O in the Rocket microarchitecture :contentReference[oaicite:0]{index=0}  
+- Building a full flow including Verilog generation, simulation, and performance benchmarking vs. software
 
 ### Embedded CV System — Smart Camera @ Sensify  
-- Built a **Raspberry Pi + IMX219** system for trash detection  
-- Implementing **C++ frame buffering** and **OpenCV classification**  
-- Writing custom V4L2-compatible camera interface with Linux stack
+- Developed a **Raspberry Pi + IMX219** embedded camera system for real-time trash detection  
+- Implemented **C++ frame buffering** and **OpenCV-based** classification on a Linux driver stack  
+- Reduced end-to-end latency by ~30% via custom buffering and frame-selection logic :contentReference[oaicite:1]{index=1}  
 
-### Data Acquisition — NU Formula Racing  
+### Data Acquisition Hardware — NU Formula Racing  
 **[GitHub](https://github.com/NU-Formula-Racing/daq-dynamics-25.git)**  
-- Designed and soldered PCBs for acceleration and aero sensors  
-- Integrated telemetry data pipeline for CAN-enabled DAQ  
-- Collaborated with 70+ team members to build full vehicle subsystem
+- Designed, assembled, and tested mixed-signal PCBs for **IMU, airspeed, and flow-rate** sensors using **Altium**  
+- Integrated sensor data into a **CAN-enabled DAQ** pipeline and on-car telemetry system  
+- Built a **bunker monitoring system** to track real-time voltage across 12 battery modules for safe storage :contentReference[oaicite:2]{index=2}  
 
 ---
 
-## Research Experience
+## Research & Experience
 
-- **Spintronics Researcher @ Northwestern**  
-  - Fabricated **Fe₃GaTe₂ Hall bar devices** and layered structures  
-  - Investigated **ionic gating effects** for next-gen spintronic devices  
-  - Used low-temp electrical transport measurements and dry transfer  
+### Parallel Architecture Group @ Northwestern — Research Assistant  
+- Designing a **Reed–Solomon hardware accelerator ASIC** integrated into a RISC-V CPU pipeline  
+- Implementing the co-processor at RTL within **Chipyard**, interfacing with memory hierarchies and I/O  
+- Running performance tests using **Verilator**, **FireSim**, and FPGA boards; achieving up to **100× speedup** over software testbenches :contentReference[oaicite:3]{index=3}  
 
-- **Garcia Program @ Stony Brook (MRS '23 Presenter)**  
-  - Engineered semiconducting nanocomposites via 3D printing  
-  - Presented first-author abstract at **MRS Fall 2023**  
+### Nanoscale Spintronic Devices — Northwestern University  
+- Fabricated **Fe₃GaTe₂ Hall bar devices** and layered structures via maskless lithography  
+- Performed low-temperature transport measurements to study **ionic gating effects** in spintronic materials  
+- Wrote Python scripts for electrical and magnetic data analysis used in a poster presentation :contentReference[oaicite:4]{index=4}  
+
+### Organic Semiconducting Nanocomposites — Garcia Program @ Stony Brook  
+- Engineered an organic flame-retardant nanocomposite with controlled electrical and thermal properties  
+- Co-designed experiments, characterized material performance, and authored a **first-author abstract** accepted to **MRS Fall 2023** :contentReference[oaicite:5]{index=5}  
 
 ---
 
 ## Technical Skills
 
+- **Programming & Frameworks**  
+  Python, C/C++, Verilog, Chisel, Scala, CUDA, MATLAB, LaTeX
 
-- **Programming Languages & Frameworks**:  
-  Python, C++, Verilog, Chisel, Scala, CUDA, MATLAB, LaTeX
+- **Hardware & Embedded Systems**  
+  ASIC design, SoC development (**Chipyard**, Rocket Core integration),  
+  Embedded systems (Raspberry Pi, Arduino, ESP32), IMX219 camera integration, USB/UART
 
-- **Hardware Design & Embedded Systems**:  
-  ASIC design, SoC development (Chipyard), Rocket Core integration,  
-  Embedded systems (Raspberry Pi, Arduino, ESP32), IMX219 camera integration
-- **Physical Design & Circuit Design Tools**:  
-  OpenROAD, Altium Designer, PCB design and soldering, Maskless Lithography
-- **Computer Vision & Signal Processing**:  
-  OpenCV, Linux camera driver stack (V4L2), sensor data acquisition
-- **Simulation, Analysis & Debugging Tools**:  
-  Oscilloscopes, gtkWave, Make, SBT, shell scripting
+- **Physical & PCB Design**  
+  OpenROAD (physical design and resizer integration),  
+  Altium Designer, mixed-signal PCB design and soldering, maskless lithography
 
-- **Operating Systems & Software Tools**:  
-  Linux (driver integration, shell), Git, Conda, Autodesk Fusion 360
+- **Computer Vision, Signal Processing & Data Acquisition**  
+  OpenCV, Linux camera driver stack (V4L2), sensor interfacing, DAQ, CAN-based telemetry
+
+- **Tools & Environments**  
+  Linux/Unix, Git, Make, SBT, shell scripting, oscilloscopes, logic analyzers, gtkWave
 
 ---
 
-## Contacts
-- zhouxuyi20060401@gmail.com  
-- [LinkedIn](https://www.linkedin.com/in/xuyi-zhou-515394330)  
+## Contact
+
+- 📱 773-461-8464  
+- 📧 XuyiMikeZhou@gmail.com  
+- 💼 [LinkedIn](https://www.linkedin.com/in/mikexyz/)
