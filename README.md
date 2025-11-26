@@ -34,7 +34,7 @@ I’m still exploring where to specialize long-term, but I really enjoy tackling
 
 ---
 
-## Research & Experience
+## Projects
 
 ### GPU-Accelerated Gate Sizing using the Held Algorithm  
 **[GitHub](https://github.com/danielhufnagle/COMP_ENG-357-Final.git)** • [Paper](https://www.overleaf.com/read/pvsbfdhfkqzf#b064cc)  
