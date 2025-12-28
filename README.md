@@ -41,6 +41,11 @@ I’m still exploring where to specialize long-term, but I really enjoy tackling
 - Implemented a parallelized version of the Held algorithm gate sizing in silicon physical design automation, achieved a **6% reduction** in total design area for the **tinyRocket chip** and **17%** for the GCD chip
 - Integrated CUDA implementation with the OpenROAD resizer and conducted verification with built-in testbenches
 
+### Interpretable FPGA Power Estimation by Greedy Boosting and Feature Expansion
+**[GitHub](https://github.com/xuyizhou8129/fpga-power-estimator)** • [Paper](https://www.overleaf.com/project/691162af603b1a669403d144)  
+- Developed a nonlinear boosting model based on machine learning for FPGA power prediction, achieving **87% test accuracy** within ±10% error and reducing test RMSE by **19%** over a linear baseline
+- Identified and ranked dominant power drivers (DSP, BRAM, LUT) to improve model interpretability
+
 ### Nanoscale Spintronic Devices — Northwestern University  
 - Designed suing AutoCAD and Fabricated **Fe₃GaTe₂ Hall bar devices** and layered structures via maskless lithography  
 - Performed low-temperature transport measurements to study **ionic gating effects** in spintronic materials  
